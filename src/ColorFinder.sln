@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorFinder", "ColorFinder\ColorFinder.csproj", "{B069064F-7C6D-41D9-A2AF-AA0210B37B62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorFinder.UserActivityMonitor", "C:\Users\Alberto\Desktop\GlobalHook\Gma.UserActivityMonitor\ColorFinder.UserActivityMonitor.csproj", "{F52AA97E-180A-40ED-8F2B-09080171D6C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorFinder.UserActivityMonitor", "Gma.UserActivityMonitor\ColorFinder.UserActivityMonitor.csproj", "{F52AA97E-180A-40ED-8F2B-09080171D6C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
