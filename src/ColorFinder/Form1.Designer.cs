@@ -1,4 +1,4 @@
-﻿namespace ColorFinder
+namespace ColorFinder
 {
     partial class Form1
     {
@@ -41,7 +41,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.niColorFinder = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cmsColorFinder = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiFechar = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.cmsColorFinder.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,9 +142,28 @@
             // 
             // niColorFinder
             // 
+            this.niColorFinder.ContextMenuStrip = this.cmsColorFinder;
             this.niColorFinder.Icon = ((System.Drawing.Icon)(resources.GetObject("niColorFinder.Icon")));
             this.niColorFinder.Text = "Color Finder";
             this.niColorFinder.Visible = true;
+            // 
+            // cmsColorFinder
+            // 
+            this.cmsColorFinder.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiFechar});
+            this.cmsColorFinder.Name = "cmsColorFinder";
+            this.cmsColorFinder.Size = new System.Drawing.Size(153, 48);
+            this.cmsColorFinder.Text = "Fechar";
+            // 
+            // tsmiFechar
+            // 
+            this.tsmiFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tsmiFechar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiFechar.Name = "tsmiFechar";
+            this.tsmiFechar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiFechar.Text = "&Fechar";
+            this.tsmiFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.tsmiFechar.Click += new System.EventHandler(this.tsmiFechar_Click);
             // 
             // Form1
             // 
@@ -161,6 +183,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.cmsColorFinder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -178,6 +201,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NotifyIcon niColorFinder;
+        private System.Windows.Forms.ContextMenuStrip cmsColorFinder;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFechar;
 
     }
 }
