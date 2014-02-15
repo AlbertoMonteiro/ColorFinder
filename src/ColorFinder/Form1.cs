@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
@@ -55,8 +55,15 @@ namespace ColorFinder
             Application.ApplicationExit += (sender, args) =>
             {
                 hook.Dispose();
-                niColorFinder.Visible = false;
-                niColorFinder.Dispose();
+                try
+                {
+                    niColorFinder.Visible = false;
+                    niColorFinder.Dispose();
+                }
+                catch (Exception)
+                {
+                    niColorFinder = null;
+                }
             };
         }
 
@@ -128,6 +135,11 @@ namespace ColorFinder
                     panel3.BackColor = Color.FromArgb(a);
                 }
             }
+        }
+
+        private void tsmiFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
